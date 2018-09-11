@@ -22,13 +22,6 @@ public class AirplaneController {
     }
 
     @ResponseBody
-    @PostMapping("airplane/add")
-    public Airplane add(@RequestBody Airplane airplane) {
-        airplaneRepository.insert(airplane);
-        return airplane;
-    }
-
-    @ResponseBody
     @GetMapping("airplane")
     public List<Airplane> get(){
         return airplaneRepository.findAll();

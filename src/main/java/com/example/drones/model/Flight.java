@@ -7,6 +7,8 @@ import java.util.List;
 
 public class Flight {
 
+    private Long number;
+
     private List<WayPoint> wayPointList;
 
     private List<TemporaryPoint> passedPoints;
@@ -16,10 +18,19 @@ public class Flight {
     public Flight() {
     }
 
-    public Flight(List<WayPoint> wayPointList, List<TemporaryPoint> passedPoints, List<TemporaryPoint> points) {
+    public Flight(Long number, List<WayPoint> wayPointList, List<TemporaryPoint> passedPoints, List<TemporaryPoint> points) {
+        this.number = number;
         this.wayPointList = wayPointList;
         this.passedPoints = passedPoints;
         this.points = points;
+    }
+
+    public Long getNumber() {
+        return number;
+    }
+
+    public void setNumber(Long number) {
+        this.number = number;
     }
 
     public List<WayPoint> getWayPointList() {

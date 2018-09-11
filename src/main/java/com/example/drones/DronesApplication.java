@@ -26,28 +26,17 @@ public class DronesApplication {
 			airplaneRepository.deleteAll();
 
 			// save a couple of airplanes
-			airplaneRepository.save(new Airplane((long)2,
+			airplaneRepository.save(new Airplane(2L,
 					new AirplaneCharacteristics(20.0, 5.0, 3.0, 4.0),
 				new TemporaryPoint(3.5, 6.7, 4.0, 7.0, 2.0),
 				new Flight(
-						Arrays.asList(new WayPoint(5.0, 6.0, 3.0, 3.0), new WayPoint(5.0, 6.0, 3.0, 3.0)),
+						1L,
+						Arrays.asList(new WayPoint(5.0, 6.0, 3.0, 3.0), new WayPoint(5.5, 6.0, 3.0, 3.0)),
 						Arrays.asList(),
 						Arrays.asList()
 				)
 			)
 			);
-
-			airplaneRepository.save(new Airplane((long)2,
-							new AirplaneCharacteristics(22.0, 6.0, 1.0, 4.0),
-							new TemporaryPoint(3.5, 6.7, 4.0, 7.0, 2.0),
-							new Flight(
-									Arrays.asList(new WayPoint(5.0, 6.0, 3.0, 3.0), new WayPoint(5.0, 6.0, 3.0, 3.0)),
-									Arrays.asList(),
-									Arrays.asList()
-							)
-					)
-			);
-
 
 		};
 
